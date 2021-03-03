@@ -5,11 +5,12 @@ window._ = require('lodash');
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
  */
-
 try {
     window.$ = window.jQuery = require('jquery');
     // window.Swal = require('jquery');
     window.Swal = require('sweetalert2');
+    // Nestable
+    require('nestable2/jquery.nestable');
 } catch (e) {}
 
 /**

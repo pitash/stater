@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,9 @@ Route::get('/', function () {
 Auth::routes();
 
 // Route::view('/dashboard', 'backend.dashboard');
+
+Route::get('/login/{provider}', [LoginController::class, 'redirectToProvider'])->name('login.provider');
+Route::get('/login/{provider}/callback', [LoginController::class, 'handleProviderCallback'])->name('login.callback');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

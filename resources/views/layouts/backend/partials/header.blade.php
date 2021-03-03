@@ -33,7 +33,7 @@
         <div class="app-header-left">
             <ul class="header-menu nav">
                 <li class="dropdown nav-item">
-                    <a href="javascript:void(0);" class="nav-link">
+                    <a href="{{ route('home') }}" class="nav-link" target="_blank">
                         <i class="nav-link-icon fa fa-cog"></i> Visite Site
                     </a>
                 </li>
